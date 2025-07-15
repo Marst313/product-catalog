@@ -16,8 +16,11 @@ export const Wishlist = () => {
 
   if (wishlist.length === 0) {
     return (
-      <div className="p-6 text-center">
-        <h2 className="text-xl font-semibold">Your wishlist is empty.</h2>
+      <div className="flex flex-col items-center justify-center h-[60vh] text-center space-y-4">
+        <img src="https://cdn-icons-png.flaticon.com/512/4076/4076549.png" alt="Empty Wishlist" className="w-24 h-24 opacity-70" />
+        <h2 className="text-2xl font-semibold text-muted-foreground">Your wishlist is empty</h2>
+        <p className="text-muted-foreground">Looks like you haven't added anything yet.</p>
+        <Button onClick={() => (window.location.href = "/")}>Browse Products</Button>
       </div>
     );
   }
